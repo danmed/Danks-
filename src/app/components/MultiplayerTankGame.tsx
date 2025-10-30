@@ -92,7 +92,7 @@ export default function MultiplayerTankGame() {
   const [roomData, setRoomData] = useState<RoomData | null>(null);
   const [gameState, setGameState] = useState<GameState | null>(null);
   const [error, setError] = useState('');
-  const animationFrameRef = useRef<number>();
+  const animationFrameRef = useRef<number | null>(null);
   const unsubscribeRef = useRef<(() => void) | null>(null);
 
   // Generate random room code
