@@ -66,7 +66,7 @@ const GUN_LENGTH = 25;
 export default function TankGame() {
   const canvasRef = useRef<HTMLCanvasElement>(null);
   const [gameState, setGameState] = useState<GameState | null>(null);
-  const animationFrameRef = useRef<number>();
+  const animationFrameRef = useRef<number | null>(null);
 
   // Generate terrain using simple algorithm
   const generateTerrain = (): number[] => {
